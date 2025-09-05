@@ -1,3 +1,4 @@
+import Link from "next/link";
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -85,7 +86,7 @@ export default function Page(){
         </div>
       </Section>
 
-    {/* ===================== ARTIGOS ===================== */}
+   {/* ===================== ARTIGOS (cards clicáveis) ===================== */}
 <Section id="artigos" className="py-14 md:py-20">
   <div className="text-center max-w-2xl mx-auto">
     <h2 className="text-2xl md:text-4xl font-bold">Artigos</h2>
@@ -94,49 +95,52 @@ export default function Page(){
 
   <div className="mt-10 grid md:grid-cols-3 gap-5">
     {/* Artigo 1 */}
-    <Card>
-      <CardHeader>
-        <CardTitle>
-          A importância de um advogado especializado em Direito do Trabalho e Família
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="text-sm text-neutral-700">
-        Muitos conflitos exigem orientação técnica especializada. Em <strong>Trabalho</strong>, ações sobre
-        verbas rescisórias, horas extras e assédio. Em <strong>Família</strong>, temas como divórcio, guarda e
-        pensão. Um advogado experiente antecipa riscos, conduz acordos e evita litígios longos — protegendo
-        seus direitos com eficiência.
-      </CardContent>
-    </Card>
+    <Link href="/artigos/advogado-trabalho-familia" className="block group" aria-label="Ler artigo: A importância de um advogado especializado em Direito do Trabalho e Família">
+      <Card className="transition-transform group-hover:-translate-y-0.5">
+        <CardHeader>
+          <CardTitle>
+            A importância de um advogado especializado em Direito do Trabalho e Família
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm text-neutral-700">
+          Muitos conflitos exigem orientação técnica especializada. Em <strong>Trabalho</strong>, ações sobre
+          verbas rescisórias, horas extras e assédio. Em <strong>Família</strong>, temas como divórcio, guarda e
+          pensão. Um advogado experiente antecipa riscos, conduz acordos e evita litígios longos.
+        </CardContent>
+      </Card>
+    </Link>
 
     {/* Artigo 2 */}
-    <Card>
-      <CardHeader>
-        <CardTitle>
-          Progressão Vertical na EBSERH: o que mudou e como proteger seus direitos
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="text-sm text-neutral-700">
-        Mudanças recentes nas normas da EBSERH priorizaram <strong>tempo de serviço</strong> e reduziram o
-        peso de títulos e produção científica. Empregados com alta pontuação podem ser prejudicados — tema
-        que pode envolver <strong>direito adquirido</strong> e <strong>alteração contratual lesiva</strong>.
-        Em muitos casos é possível buscar a <strong>aplicação das regras anteriores</strong> na Justiça.
-      </CardContent>
-    </Card>
+    <Link href="/artigos/ebserh-progressao" className="block group" aria-label="Ler artigo: Progressão Vertical na Ebserh">
+      <Card className="transition-transform group-hover:-translate-y-0.5">
+        <CardHeader>
+          <CardTitle>
+            Progressão Vertical na Ebserh: o que mudou e como proteger seus direitos
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm text-neutral-700">
+          Mudanças recentes nas normas da Ebserh priorizaram <strong>tempo de serviço</strong> e reduziram o
+          peso de títulos e produção científica. Empregados com alta pontuação podem ser prejudicados — em
+          muitos casos é possível buscar a <strong>aplicação das regras anteriores</strong> na Justiça.
+        </CardContent>
+      </Card>
+    </Link>
 
     {/* Artigo 3 */}
-    <Card>
-      <CardHeader>
-        <CardTitle>
-          Rescisão indireta: quando o trabalhador pode sair e manter todos os direitos
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="text-sm text-neutral-700">
-        A <strong>rescisão indireta</strong> ocorre quando a empresa comete falta grave (atraso de salários,
-        abuso, exigências ilegais). Nessa hipótese, o empregado rompe o vínculo por <strong>justa causa do
-        empregador</strong> e pode ter direito a aviso prévio, multa de 40% do FGTS, saque e seguro-desemprego
-        (se preencher requisitos). Uma análise jurídica evita prejuízos.
-      </CardContent>
-    </Card>
+    <Link href="/artigos/rescisao-indireta" className="block group" aria-label="Ler artigo: Rescisão indireta">
+      <Card className="transition-transform group-hover:-translate-y-0.5">
+        <CardHeader>
+          <CardTitle>
+            Rescisão indireta: quando o trabalhador pode sair e manter todos os direitos
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm text-neutral-700">
+          A <strong>rescisão indireta</strong> ocorre quando a empresa comete falta grave (atraso de salários,
+          abuso, exigências ilegais). O empregado rompe o vínculo por <strong>justa causa do empregador</strong>
+          e pode ter direito a aviso prévio, multa de 40% do FGTS, saque e seguro-desemprego.
+        </CardContent>
+      </Card>
+    </Link>
   </div>
 </Section>
 
