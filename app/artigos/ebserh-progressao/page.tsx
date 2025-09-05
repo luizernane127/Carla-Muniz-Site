@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Progressão Vertical na Ebserh: o que mudou e como proteger seus direitos",
-  description: "Mudanças nas normas da Ebserh e caminhos jurídicos para proteger a progressão baseada em mérito.",
+  title: "Progressão Vertical na EBSERH: o que mudou e como proteger seus direitos",
+  description: "Mudanças nas normas da EBSERH e caminhos jurídicos para proteger a progressão baseada em mérito.",
 };
 
 export default function Page() {
   return (
     <main className="container py-10 md:py-16">
-      <h1 className="text-3xl md:text-4xl font-bold">Progressão Vertical na Ebserh: o que mudou e como proteger seus direitos</h1>
+      <h1 className="text-3xl md:text-4xl font-bold">Progressão Vertical na EBSERH: o que mudou e como proteger seus direitos</h1>
 
       <h2 className="mt-8 text-xl md:text-2xl font-semibold">O que é a Progressão Vertical?</h2>
       <p className="mt-3 text-neutral-700">
