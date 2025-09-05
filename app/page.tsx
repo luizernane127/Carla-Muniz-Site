@@ -115,11 +115,11 @@ export default function Page(){
       <Card className="transition-transform group-hover:-translate-y-0.5">
         <CardHeader>
           <CardTitle>
-            Progressão Vertical na Ebserh: o que mudou e como proteger seus direitos
+            Progressão Vertical na EBSERH: o que mudou e como proteger seus direitos
           </CardTitle>
         </CardHeader>
         <CardContent className="text-sm text-neutral-700">
-          Mudanças recentes nas normas da Ebserh priorizaram <strong>tempo de serviço</strong> e reduziram o
+          Mudanças recentes nas normas da EBSERH priorizaram <strong>tempo de serviço</strong> e reduziram o
           peso de títulos e produção científica. Empregados com alta pontuação podem ser prejudicados — em
           muitos casos é possível buscar a <strong>aplicação das regras anteriores</strong> na Justiça.
         </CardContent>
