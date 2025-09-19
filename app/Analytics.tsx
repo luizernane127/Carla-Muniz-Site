@@ -1,41 +1,28 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import Script from "next/script";
-import { Suspense } from "react";
-import Analytics from "./Analytics"; // ajuste o caminho se precisar
+'use client';
 
-export const metadata: Metadata = {
-  title: "Carla Muniz Advocacia",
-  description: "Site institucional do escritório Carla Muniz Advocacia",
-};
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="pt-BR">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NL0MY51FXZ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NL0MY51FXZ', { debug_mode: true });
-          `}
-        </Script>
-      </head>
-      <body>
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
-        {children}
-      </body>
-    </html>
-  );
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+const GA_ID = 'G-NL0MY51FXZ';
+
+export default function Analytics() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (!window.gtag || !pathname) return;
+
+    const query = searchParams?.toString();
+    const url = query ? `${pathname}?${query}` : pathname;
+
+    window.gtag('config', GA_ID, { page_path: url });
+  }, [pathname, searchParams]);
+
+  return null;
 }
