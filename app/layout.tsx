@@ -1,40 +1,37 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Suspense } from "react";
+import Analytics from "./Analytics";
 
 export const metadata: Metadata = {
   title: "Carla Muniz Advocacia",
-  description: "Advocacia especializada em Direito do Trabalho e Direito de Família.",
+  description: "Advocacia e Consultoria Jurídica • OAB/PB 21.527",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        {/* Google Analytics 4 */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-NL0MY51FXZ`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        {/* Google Analytics base script */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=G-NL0MY51FXZ`} />
 
-            // Dispara automaticamente o primeiro page_view
-            gtag('config', 'G-NL0MY51FXZ', { debug_mode: true });
-          `}
-        </Script>
+        <script
+          id="ga-init"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NL0MY51FXZ', { page_path: window.location.pathname });
+            `,
+          }}
+        />
       </head>
-      <body className={inter.className}>
+      <body>
+        {/* Suspense para não travar durante navegação */}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         {children}
       </body>
     </html>
