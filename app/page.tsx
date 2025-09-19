@@ -128,7 +128,7 @@ export default function Page(){
 
  {/* Artigo 3 */}
 <Link
-  href="/artigos/ebserh-progressao"
+  href="/artigos/insalubridade-ebserh"
   className="block group"
   aria-label="Ler artigo: Insalubridade EBSERH"
 >
