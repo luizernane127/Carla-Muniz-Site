@@ -4,19 +4,23 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Carla Muniz Advocacia",
-  description: "Direito do Trabalho e Direito de Família em João Pessoa",
+  description: "Site institucional do escritório Carla Muniz Advocacia",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR">
       <head>
-        {/* Google Tag Manager (Google Ads) */}
+        {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17524523332"
+          src="https://www.googletagmanager.com/gtag/js?id=G-NL0MY51FXZ"
           strategy="afterInteractive"
         />
-        <Script id="google-ads-tag" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
