@@ -93,6 +93,18 @@ export default function Page() {
           equipe para uma avaliação personalizada.
         </p>
       </div>
+
+      {/* Botão WhatsApp */}
+      <div className="mt-10 flex justify-center">
+        <a
+          href="https://wa.me/5583996858590"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
+        >
+          💬 Falar no WhatsApp
+        </a>
+      </div>
     </main>
   );
 }
