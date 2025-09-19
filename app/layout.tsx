@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
-import Analytics from "./Analytics"; // importa o componente do GA
+import Analytics from "./Analytics"; // componente do GA
 
 export const metadata: Metadata = {
   title: "Carla Muniz Advocacia",
@@ -31,7 +31,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <Analytics /> {/* componente para disparar page_view a cada navegação */}
+        <Analytics />
         {children}
       </body>
     </html>
