@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WhatsappButton from "../components/WhatsappButton";
+import WhatsappButton from "../../components/WhatsappButton";
 
 export const metadata: Metadata = {
   title: "Adicional de Insalubridade na EBSERH: Salário-Mínimo x Salário-Base",
