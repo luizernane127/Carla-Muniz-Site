@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
-import Analytics from "./Analytics"; // componente do GA
+import { Suspense } from "react";           // ⬅️ importe aqui
+import Analytics from "./Analytics";         // ajuste o caminho se estiver em outro lugar
 
 export const metadata: Metadata = {
   title: "Carla Muniz Advocacia",
@@ -31,7 +32,11 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <Analytics />
+        {/* ⬇️ Envolva o componente que usa useSearchParams/usePathname */}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
+
         {children}
       </body>
     </html>
