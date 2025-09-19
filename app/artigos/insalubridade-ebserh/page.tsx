@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WhatsappButton from "../components/WhatsappButton";
 
 export const metadata: Metadata = {
   title: "Adicional de Insalubridade na EBSERH: Salário-Mínimo x Salário-Base",
@@ -94,16 +95,12 @@ export default function Page() {
         </p>
       </div>
 
-      {/* Botão WhatsApp */}
+      {/* Botão WhatsApp com evento GA */}
       <div className="mt-10 flex justify-center">
-        <a
-          href="https://wa.me/5583996858590"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
-        >
-          💬 Falar no WhatsApp
-        </a>
+        <WhatsappButton
+          phone="5583996858590"
+          text="Olá, quero mais informações sobre meu caso!"
+        />
       </div>
     </main>
   );
