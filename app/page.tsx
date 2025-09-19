@@ -127,21 +127,23 @@ export default function Page(){
     </Link>
 
     {/* Artigo 3 */}
-    <Link href="/artigos/rescisao-indireta" className="block group" aria-label="Ler artigo: Rescisão indireta">
-      <Card className="transition-transform group-hover:-translate-y-0.5">
-        <CardHeader>
-          <CardTitle>
-            Rescisão indireta: quando o trabalhador pode sair e manter todos os direitos
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="text-sm text-neutral-700">
-          A <strong>rescisão indireta</strong> ocorre quando a empresa comete falta grave (atraso de salários,
-          abuso, exigências ilegais). O empregado rompe o vínculo por <strong>justa causa do empregador</strong>
-          e pode ter direito a aviso prévio, multa de 40% do FGTS, saque e seguro-desemprego.
-        </CardContent>
-      </Card>
-    </Link>
-  </div>
+    {/* Artigo 3 */}
+<Link href="/artigos/insalubridade-ebserh" className="block group" aria-label="Ler artigo: Insalubridade EBSERH">
+  <Card className="transition-transform group-hover:-translate-y-0.5">
+    <CardHeader>
+      <CardTitle>
+        Adicional de Insalubridade na EBSERH: Salário-Mínimo x Salário-Base
+      </CardTitle>
+    </CardHeader>
+    <CardContent className="text-sm text-neutral-700">
+      A mudança da base de cálculo do adicional de insalubridade pode reduzir
+      o valor recebido pelos empregados. Explicamos como a Justiça do Trabalho
+      pode ser acionada para proteger o <strong>direito adquirido</strong> e evitar
+      alterações unilaterais prejudiciais.
+    </CardContent>
+  </Card>
+</Link>
+ </div>
 </Section>
 
       <Section id="contato" className="py-14 md:py-20">
